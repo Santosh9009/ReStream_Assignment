@@ -5,7 +5,6 @@ const RestreamButtonWithPopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const popoverRef = useRef<HTMLDivElement>(null);
 
-  // Handles click outside to close the popover
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (popoverRef.current && !popoverRef.current.contains(event.target as Node)) {
@@ -27,20 +26,20 @@ const RestreamButtonWithPopover = () => {
   return (
     <div className="relative inline-block">
       <button className="relative inline-flex items-center px-4 py-2 text-base font-bold rounded-md transition-all duration-300 ease-in-out group hover:border-[3px] hover:border-dotted focus:outline-none">
-      {/* Cross mark */}
+
       <span
-        className="absolute -top-2 -right-2 text-black cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full p-[0.01rem] bg-white hover:bg-blue-500 hover:text-white"
+        className="absolute -top-2 -right-2 text-black cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full p-[0.1rem] bg-white hover:bg-blue-500 hover:text-white"
         onClick={handleCrossClick}
       >
-        <X height={15} width={15} />
+        <X height={12} width={12} strokeWidth={2}/>
       </span>
-      {/* Button text with brighter gradient */}
+
       <span className="transition-all duration-300 group-hover:text-sm bg-gradient-to-t to-yellow-400 from-blue-400 text-transparent bg-clip-text text-lg">
         Restream
       </span>
     </button>
 
-      {/* Popover Content */}
+
       {isPopoverOpen && (
         <div
           ref={popoverRef}

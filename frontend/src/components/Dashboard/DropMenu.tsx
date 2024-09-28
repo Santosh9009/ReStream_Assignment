@@ -31,7 +31,7 @@ const DropMenu = () => {
 
   const openLogoutDialog = () => {
     setIsLogoutDialogOpen(true);
-    setIsDropdownOpen(false); // Close dropdown when dialog opens
+    setIsDropdownOpen(false); 
   };
 
   const closeLogoutDialog = () => setIsLogoutDialogOpen(false);
@@ -61,7 +61,6 @@ const DropMenu = () => {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      {/* Logout confirmation dialog */}
       <LogoutAlert
         isOpen={isLogoutDialogOpen}
         onLogout={handleLogout}

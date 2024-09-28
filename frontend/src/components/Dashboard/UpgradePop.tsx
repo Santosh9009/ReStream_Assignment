@@ -8,7 +8,6 @@ interface CustomPopoverProps {
 const CustomPopover: React.FC<CustomPopoverProps> = ({ onClose }) => {
   const popoverRef = useRef<HTMLDivElement>(null);
 
-  // Close the popover when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (

@@ -7,10 +7,12 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { AiFillDiscord } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import googleimg from '../assets/google-symbol.png';
+
 
 const Home = () => {
   const navigate = useNavigate();
-  // Define animation variants
+
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -19,23 +21,19 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-20 md:pt-0 min-h-screen bg-black text-white flex flex-col items-center justify-center">
+      <div className="pt-20 md:pt-0 min-h-screen bg-black text-white flex flex-col items-center justify-center py-5">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
-          {/* Left Side: Content */}
+
           <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-            {/* Animated Heading */}
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-4"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              transition={{ duration: 0.5 }}
+
+            <h1 
+              className="text-4xl md:text-6xl font-bold mb-4 z-0"
             >
               One live stream. <br />
               <span className="text-purple-600">30+ destinations.</span>
-            </motion.h1>
+            </h1>
             
-            {/* Animated Paragraph */}
+
             <motion.p 
               className="text-lg md:text-xl mb-6"
               initial="hidden"
@@ -46,25 +44,22 @@ const Home = () => {
               Multistream & reach your audience, wherever they are.
             </motion.p>
 
-            {/* Login/Signup Section */}
+
             <div className="w-full mx-auto max-w-sm p-6 rounded-lg shadow-lg md:mx-0">
               <motion.button
-                className="w-full bg-white text-gray-800 py-2 px-4 rounded mb-4 flex items-center justify-center"
+                className="w-full bg-white text-gray-800 py-2 px-4 rounded mb-4 flex items-center justify-start"
                 initial="hidden"
                 animate="visible"
                 variants={fadeIn}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                  alt="Google"
-                  className="w-5 h-5 mr-2"
-                />
+                <img className="w-5 h-5 mr-4" src={googleimg} alt="googleimg" />
+                
                 Continue with Google
               </motion.button>
               
               <motion.button
-                className="w-full bg-white text-gray-800 py-2 px-4 rounded mb-4 flex items-center justify-center"
+                className="w-full bg-white text-gray-800 py-2 px-4 rounded mb-4 flex items-center justify-start"
                 initial="hidden"
                 animate="visible"
                 variants={fadeIn}
@@ -73,7 +68,7 @@ const Home = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
                   alt="Facebook"
-                  className="w-5 h-5 mr-2"
+                  className="w-5 h-5 mr-4"
                 />
                 Continue with Facebook
               </motion.button>
@@ -109,7 +104,7 @@ const Home = () => {
               </Link>
             </div>
 
-            {/* Footer */}
+
             <footer className="mt-8 text-gray-500 text-sm text-center md:text-left">
               <p>
                 By signing up, you agree to the Terms of Service.
@@ -123,16 +118,14 @@ const Home = () => {
             </footer>
           </div>
 
-          {/* Right Side: Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative">
-              {/* Main character image */}
               <img src={heroimg} alt="Hero" />
             </div>
           </div>
         </div>
 
-        {/* Bottom Links Section */}
+
         <div className="flex flex-wrap justify-evenly items-center w-full mt-6 text-center text-gray-500">
           <p className="my-2">© 2024 Restream, Inc. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 my-2">
@@ -145,7 +138,7 @@ const Home = () => {
             <Link to="/referral" className="hover:underline">Referral Program</Link>
             <Link to="/media-kit" className="hover:underline">Media Kit</Link>
           </div>
-          <div className="flex justify-evenly items-center gap-3 my2">
+          <div className="flex justify-evenly items-center gap-3 my-2">
             <AiFillTwitterCircle className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer" />
             <AiFillDiscord className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer" />
             <FaFacebook className="w-6 h-6 text-gray-400 hover:text-blue-500 cursor-pointer" />

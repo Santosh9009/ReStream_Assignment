@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="destinations" className="px-3 py-5">
+        <TabsContent value="destinations" className="px-3 py-5 min-h-[50vh]">
           <div className="flex flex-wrap gap-3 justify-start items-center">
             <Button
               variant="default"
@@ -67,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
           </div>
         </TabsContent>
 
-        <TabsContent value="chat" className="p-3">
+        <TabsContent value="chat" className="p-3 min-h-[50vh]">
           <div className="flex justify-end items-center w-full text-slate-400">
             <button className="flex justify-evenly items-center gap-2 overflow-hidden hover:bg-[#1f3d6e] rounded-md p-2">
               Chat Overlay

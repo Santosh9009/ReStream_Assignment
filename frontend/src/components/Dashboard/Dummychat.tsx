@@ -2,7 +2,7 @@ import dummy from '../../assets/man-avatar.png';
 const ChatBubble = () => {
   return (
     <div className="flex items-start space-x-3  bg-transparent rounded-lg shadow-md max-w-md">
-      {/* Avatar */}
+
       <div className="flex-shrink-0">
         <img 
           src={dummy} 
@@ -11,7 +11,7 @@ const ChatBubble = () => {
         />
       </div>
 
-      {/* Chat Content */}
+
       <div className="flex-1">
         <div className="bg-[#162B4D] rounded-lg p-3">
           <p className="text-gray-200 text-sm">

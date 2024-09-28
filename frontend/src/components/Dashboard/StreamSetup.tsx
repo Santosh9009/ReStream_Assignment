@@ -1,7 +1,6 @@
 import { Pen, Settings } from "lucide-react";
 import { Button } from "../ui/button";
 import RestreamButton from "./Button";
-// import { Input } from "../ui/input";
 
 const StreamSetup = () => {
   return (

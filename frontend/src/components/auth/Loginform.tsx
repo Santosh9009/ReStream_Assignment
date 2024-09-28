@@ -47,7 +47,7 @@ const LoginForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="p-8 bg-white rounded-lg shadow-lg w-96 transition-transform transform hover:scale-105">
-        <h2 className="mb-6 text-3xl font-bold text-center text-gray-700">Login</h2>
+        <h2 className="mb-6 text-2xl md:text-3xl font-bold text-center text-gray-700">Login</h2>
         <form onSubmit={handleLogin}>
           <input
             type="email"

@@ -65,7 +65,7 @@ const SignUpForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-white rounded-lg shadow-lg w-96 p-8 transition-transform transform hover:scale-105">
-        <h2 className="mb-6 text-3xl font-bold text-center text-gray-700">Sign Up</h2>
+        <h2 className="mb-6 text-2xl md:text-3xl font-bold text-center text-gray-700">Sign Up</h2>
         {error && <p className="mb-4 text-red-600 text-center">{error}</p>}
         <form onSubmit={handleSignUp}>
           <input
