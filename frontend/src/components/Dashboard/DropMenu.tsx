@@ -8,16 +8,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/hooks/useAuth";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 import LogoutAlert from "./LogoutAlert";
+import { AuthContext } from "@/contexts/AuthContext";
 
 const DropMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLogoutDialogOpen, setIsLogoutDialogOpen] = useState(false);
   const { logout } = useAuth();
   const navigate = useNavigate();
+  const authContext = useContext(AuthContext); 
+  const { currentUser } = authContext || { currentUser: null };
 
   const handleLogout = async () => {
     await logout();
@@ -41,7 +44,7 @@ const DropMenu = () => {
       <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
         <DropdownMenuTrigger>
           <div className="flex justify-between items-center gap-2 border-none">
-            <span className="text-sm">lossantoshoo@gmail.com</span>
+            <span className="text-sm">{currentUser?.email || "user"}</span>
             {isDropdownOpen ? (
               <ChevronUp height={20} className="text-slate-400" />
             ) : (
